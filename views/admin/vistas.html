@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistas SQL | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li><a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="aerolineas.html"><i class="fa-solid fa-building"></i> Aerolíneas</a></li>
+            <li><a href="aeronaves.html"><i class="fa-solid fa-plane-circle-check"></i> Aeronaves</a></li>
+            <li><a href="rutas.html"><i class="fa-solid fa-route"></i> Rutas</a></li>
+            <li><a href="vuelos.html"><i class="fa-solid fa-plane-departure"></i> Vuelos</a></li>
+            <li><a href="pasajeros.html"><i class="fa-solid fa-users"></i> Pasajeros</a></li>
+            <li><a href="tripulacion.html"><i class="fa-solid fa-user-tie"></i> Tripulación</a></li>
+            <li><a href="tripulacion_vuelo.html"><i class="fa-solid fa-users-gear"></i> Asignación de Tripulación</a></li>
+            <li><a href="reservaciones.html"><i class="fa-solid fa-ticket"></i> Reservaciones</a></li>
+            
+            <li class="active">
+                <a href="vistas.html">
+                    <i class="fa-solid fa-eye"></i>
+                    Vistas SQL
+                </a>
+            </li>
+
+            <li><a href="procedimientos.html"><i class="fa-solid fa-gears"></i> Procedimientos</a></li>
+            <li><a href="triggers.html"><i class="fa-solid fa-bolt"></i> Triggers</a></li>
+            <li><a href="transacciones.html"><i class="fa-solid fa-database"></i> Transacciones</a></li>
+            <li><a href="../../index.html"><i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesión</a></li>
+
+        </ul>
+
+    </div>
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Vistas SQL</h1>
+                <p>Consultas predefinidas para análisis y operación aeroportuaria</p>
+            </div>
+
+        </header>
+
+        <!-- TARJETAS -->
+
+        <section class="stats">
+
+            <div class="card">
+                <i class="fa-solid fa-calendar-day"></i>
+                <h2>126</h2>
+                <p>Vuelos del Día</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-crown"></i>
+                <h2>84</h2>
+                <p>Pasajeros Frecuentes</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h2>9</h2>
+                <p>Aeronaves en Mantenimiento</p>
+            </div>
+
+        </section>
+
+        <!-- VISTA 1 -->
+
+        <section class="view-card">
+
+            <div class="view-header">
+
+                <h2>
+                    <i class="fa-solid fa-calendar-day"></i>
+                    Vista: Vuelos del Día
+                </h2>
+
+                <p>
+                    Muestra todos los vuelos programados para la fecha actual.
+                </p>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Vuelo</th>
+                        <th>Ruta</th>
+                        <th>Salida</th>
+                        <th>Llegada</th>
+                        <th>Puerta</th>
+                        <th>Estado</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>AM102</td>
+                        <td>MEX ➜ CUN</td>
+                        <td>08:30</td>
+                        <td>10:50</td>
+                        <td>A12</td>
+                        <td>Programado</td>
+                    </tr>
+
+                    <tr>
+                        <td>Y4215</td>
+                        <td>MTY ➜ GDL</td>
+                        <td>09:15</td>
+                        <td>10:40</td>
+                        <td>B04</td>
+                        <td>En Vuelo</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- VISTA 2 -->
+
+        <section class="view-card">
+
+            <div class="view-header">
+
+                <h2>
+                    <i class="fa-solid fa-crown"></i>
+                    Vista: Pasajeros Frecuentes
+                </h2>
+
+                <p>
+                    Pasajeros con más de 10 vuelos durante el último año.
+                </p>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Pasajero</th>
+                        <th>Pasaporte</th>
+                        <th>Vuelos</th>
+                        <th>Nivel Fidelidad</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Dahlia Jiménez</td>
+                        <td>MXA123456</td>
+                        <td>42</td>
+                        <td>Platino</td>
+                    </tr>
+
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>MXB987654</td>
+                        <td>21</td>
+                        <td>Oro</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- VISTA 3 -->
+
+        <section class="view-card">
+
+            <div class="view-header">
+
+                <h2>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    Vista: Aeronaves en Mantenimiento
+                </h2>
+
+                <p>
+                    Aeronaves temporalmente fuera de servicio.
+                </p>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Modelo</th>
+                        <th>Estado</th>
+                        <th>Retorno Estimado</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>XA-AMX</td>
+                        <td>Boeing 737-800</td>
+                        <td>Mantenimiento</td>
+                        <td>05/06/2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>XA-VIV</td>
+                        <td>Airbus A320</td>
+                        <td>Mantenimiento</td>
+                        <td>09/06/2026</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

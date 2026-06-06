@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.logo{
+    font-size:70px;
+    margin-bottom:20px;
+    color:#60a5fa;
+}
+
+.header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:1.1rem;
+    color:#cbd5e1;
+}
+
+.roles{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    color:#1e293b;
+    text-decoration:none;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#64748b;
+}
+
+.admin i{
+    color:#dc2626;
+}
+
+.empleado i{
+    color:#2563eb;
+}
+
+.usuario i{
+    color:#16a34a;
+}
+

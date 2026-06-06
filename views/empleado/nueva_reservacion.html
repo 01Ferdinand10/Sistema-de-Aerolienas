@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Reservación | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i>
+                        Pasajeros
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i>
+                        Reservaciones
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar Sesión
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Nueva Reservación</h1>
+                <p>Registro y venta de boletos de vuelo</p>
+            </div>
+
+            <a href="reservaciones.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver
+            </a>
+
+        </header>
+
+        <section class="form-container">
+
+            <form class="form-grid" id="formNuevaReservacion">
+
+                <!-- CAMPOS OCULTOS PARA IDs -->
+                <input type="hidden" id="pasajero_id" name="pasajero_id">
+                <input type="hidden" id="vuelo_id" name="vuelo_id">
+
+                <!-- PASAJERO -->
+
+                <div class="form-group">
+
+                    <label>Pasajero</label>
+
+                    <select id="selectPasajero">
+                        <option value="">Seleccionar Pasajero</option>
+                    </select>
+
+                </div>
+
+                <!-- VUELO -->
+
+                <div class="form-group">
+
+                    <label>Vuelo</label>
+
+                    <select id="selectVuelo">
+                        <option value="">Seleccionar Vuelo</option>
+                    </select>
+
+                </div>
+
+
+
+                <!-- CLASE -->
+
+                <div class="form-group">
+
+                    <label>Clase</label>
+
+                    <select id="selectClase" name="clase">
+                        <option>Económica</option>
+                        <option>Premium Economy</option>
+                        <option>Business</option>
+                        <option>Primera Clase</option>
+                    </select>
+
+                </div>
+
+                <!-- ASIENTO -->
+
+                <div class="form-group">
+
+                    <label>Asiento</label>
+
+                    <input
+                        type="text"
+                        id="inAsiento"
+                        name="asiento"
+                        placeholder="12A">
+
+                </div>
+
+                <!-- PAGO -->
+
+                <div class="form-group">
+
+                    <label>Método de Pago</label>
+
+                    <select id="selectMetodoPago" name="metodo_pago">
+                        <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                        <option value="Tarjeta de Débito">Tarjeta de Débito</option>
+                        <option value="Transferencia">Transferencia</option>
+                        <option value="Efectivo">Efectivo</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Total a Pagar ($)</label>
+
+                    <input
+                        type="number"
+                        id="inTotal"
+                        name="total"
+                        placeholder="3500">
+
+                </div>
+
+                <!-- BOTONES -->
+
+                <div class="form-actions">
+
+                    <a href="reservaciones.html"
+                        class="btn-cancel">
+
+                        Cancelar
+
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn-save">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Confirmar Reservación
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+<script src="../../Assets/JS/Empleados/nueva_reservacion.js"></script>
+
+</html>

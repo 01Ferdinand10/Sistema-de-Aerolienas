@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimientos Almacenados | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li><a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="aerolineas.html"><i class="fa-solid fa-building"></i> Aerolíneas</a></li>
+            <li><a href="aeronaves.html"><i class="fa-solid fa-plane-circle-check"></i> Aeronaves</a></li>
+            <li><a href="rutas.html"><i class="fa-solid fa-route"></i> Rutas</a></li>
+            <li><a href="vuelos.html"><i class="fa-solid fa-plane-departure"></i> Vuelos</a></li>
+            <li><a href="pasajeros.html"><i class="fa-solid fa-users"></i> Pasajeros</a></li>
+            <li><a href="tripulacion.html"><i class="fa-solid fa-user-tie"></i> Tripulación</a></li>
+            <li><a href="tripulacion_vuelo.html"><i class="fa-solid fa-users-gear"></i> Asignación de Tripulación</a></li>
+            <li><a href="reservaciones.html"><i class="fa-solid fa-ticket"></i> Reservaciones</a></li>
+            <li><a href="vistas.html"><i class="fa-solid fa-eye"></i> Vistas SQL</a></li>
+
+            <li class="active">
+                <a href="procedimientos.html">
+                    <i class="fa-solid fa-gears"></i>
+                    Procedimientos
+                </a>
+            </li>
+
+            <li><a href="triggers.html"><i class="fa-solid fa-bolt"></i> Triggers</a></li>
+            <li><a href="transacciones.html"><i class="fa-solid fa-database"></i> Transacciones</a></li>
+            <li><a href="../../index.html"><i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesión</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Procedimientos Almacenados</h1>
+                <p>Automatización de procesos operativos del aeropuerto</p>
+            </div>
+
+        </header>
+
+        <!-- TARJETAS -->
+
+        <section class="stats">
+
+            <div class="card">
+                <i class="fa-solid fa-gears"></i>
+                <h2>3</h2>
+                <p>Procedimientos Activos</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-play"></i>
+                <h2>124</h2>
+                <p>Ejecuciones Hoy</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-clock"></i>
+                <h2>98%</h2>
+                <p>Ejecución Exitosa</p>
+            </div>
+
+        </section>
+
+        <!-- PROCEDIMIENTO 1 -->
+
+        <section class="procedure-card">
+
+            <div class="procedure-header">
+
+                <h2>
+                    <i class="fa-solid fa-users-gear"></i>
+                    Asignación de Tripulación a Vuelos
+                </h2>
+
+                <p>
+                    Asigna automáticamente pilotos y sobrecargos considerando disponibilidad y horas acumuladas.
+                </p>
+
+            </div>
+
+            <div class="procedure-body">
+
+                <div class="parameter">
+                    <label>Fecha del Vuelo</label>
+                    <input type="date">
+                </div>
+
+                <div class="parameter">
+                    <label>Ruta</label>
+                    <select>
+                        <option>MEX ➜ CUN</option>
+                        <option>MEX ➜ MTY</option>
+                        <option>GDL ➜ TIJ</option>
+                    </select>
+                </div>
+
+                <button class="btn-run">
+                    <i class="fa-solid fa-play"></i>
+                    Ejecutar Procedimiento
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PROCEDIMIENTO 2 -->
+
+        <section class="procedure-card">
+
+            <div class="procedure-header">
+
+                <h2>
+                    <i class="fa-solid fa-user-check"></i>
+                    Check-In Automático
+                </h2>
+
+                <p>
+                    Realiza el check-in 24 horas antes del vuelo y asigna asientos automáticamente.
+                </p>
+
+            </div>
+
+            <div class="procedure-body">
+
+                <div class="parameter">
+                    <label>Vuelo</label>
+                    <select>
+                        <option>AM102</option>
+                        <option>VB304</option>
+                        <option>Y4215</option>
+                    </select>
+                </div>
+
+                <button class="btn-run">
+                    <i class="fa-solid fa-play"></i>
+                    Ejecutar Procedimiento
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PROCEDIMIENTO 3 -->
+
+        <section class="procedure-card">
+
+            <div class="procedure-header">
+
+                <h2>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Estadísticas de Puntualidad
+                </h2>
+
+                <p>
+                    Genera indicadores mensuales de retrasos por aerolínea y sus causas.
+                </p>
+
+            </div>
+
+            <div class="procedure-body">
+
+                <div class="parameter">
+                    <label>Mes</label>
+                    <select>
+                        <option>Enero</option>
+                        <option>Febrero</option>
+                        <option>Marzo</option>
+                        <option>Abril</option>
+                    </select>
+                </div>
+
+                <div class="parameter">
+                    <label>Año</label>
+                    <select>
+                        <option>2025</option>
+                        <option>2026</option>
+                    </select>
+                </div>
+
+                <button class="btn-run">
+                    <i class="fa-solid fa-play"></i>
+                    Ejecutar Procedimiento
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- RESULTADOS -->
+
+        <section class="procedure-result">
+
+            <h2>
+                <i class="fa-solid fa-terminal"></i>
+                Resultado de Ejecución
+            </h2>
+
+            <div class="console">
+
+                Procedimiento ejecutado correctamente.<br>
+                12 pilotos asignados.<br>
+                24 sobrecargos asignados.<br>
+                0 conflictos detectados.
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

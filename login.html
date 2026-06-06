@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio de Sesión | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="Assets/css/login.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- LADO IZQUIERDO -->
+        <div class="welcome-section">
+            <div class="overlay">
+                <i class="fa-solid fa-plane-departure plane-icon"></i>
+                <h1>Suzuki Airlines</h1>
+                <p>
+                    Sistema de administración integral de vuelos,
+                    pasajeros y reservaciones.
+                </p>
+            </div>
+        </div>
+
+        <!-- LOGIN -->
+        <div class="login-section">
+            <div class="login-card">
+                <div class="login-header">
+                    <i class="fa-solid fa-plane"></i>
+                    <h2>Iniciar Sesión</h2>
+                    <p> Ingresa tus credenciales para acceder.</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>Usuario</label>
+                        <input id="usuario" type="text" placeholder="Ingrese su usuario">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Contraseña</label>
+                        <input id="contrasena" type="password" placeholder="Ingrese su contraseña">
+                    </div>
+
+                    <!-- Ejemplo de navegación -->
+                    <button type="submit" class="btn-login">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Acceder
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="Assets/JS/login.js"></script>
+</html>

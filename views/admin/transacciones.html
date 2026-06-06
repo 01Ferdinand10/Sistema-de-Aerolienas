@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li><a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="aerolineas.html"><i class="fa-solid fa-building"></i> Aerolíneas</a></li>
+            <li><a href="aeronaves.html"><i class="fa-solid fa-plane-circle-check"></i> Aeronaves</a></li>
+            <li><a href="rutas.html"><i class="fa-solid fa-route"></i> Rutas</a></li>
+            <li><a href="vuelos.html"><i class="fa-solid fa-plane-departure"></i> Vuelos</a></li>
+            <li><a href="pasajeros.html"><i class="fa-solid fa-users"></i> Pasajeros</a></li>
+            <li><a href="tripulacion.html"><i class="fa-solid fa-user-tie"></i> Tripulación</a></li>
+            <li><a href="tripulacion_vuelo.html"><i class="fa-solid fa-users-gear"></i> Asignación de Tripulación</a></li>
+            <li><a href="reservaciones.html"><i class="fa-solid fa-ticket"></i> Reservaciones</a></li>
+            <li><a href="vistas.html"><i class="fa-solid fa-eye"></i> Vistas SQL</a></li>
+            <li><a href="procedimientos.html"><i class="fa-solid fa-gears"></i> Procedimientos</a></li>
+            <li><a href="triggers.html"><i class="fa-solid fa-bolt"></i> Triggers</a></li>
+
+            <li class="active">
+                <a href="transacciones.html">
+                    <i class="fa-solid fa-database"></i>
+                    Transacciones
+                </a>
+            </li>
+            <li><a href="../../index.html"><i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesión</a></li>
+
+
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Transacciones de Base de Datos</h1>
+                <p>Operaciones críticas ejecutadas de forma atómica</p>
+            </div>
+
+        </header>
+
+        <!-- TARJETAS -->
+
+        <section class="stats">
+
+            <div class="card">
+                <i class="fa-solid fa-database"></i>
+                <h2>2</h2>
+                <p>Transacciones Definidas</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-check"></i>
+                <h2>1,285</h2>
+                <p>COMMIT Exitosos</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h2>17</h2>
+                <p>ROLLBACK Ejecutados</p>
+            </div>
+
+        </section>
+
+        <!-- TRANSACCIÓN 1 -->
+
+        <section class="transaction-card">
+
+            <div class="transaction-header">
+
+                <h2>
+                    <i class="fa-solid fa-ticket"></i>
+                    Proceso de Reservación
+                </h2>
+
+                <span class="transaction-badge">
+                    ACID
+                </span>
+
+            </div>
+
+            <p>
+                Garantiza que una reservación, actualización de asientos y registro
+                de pago se completen correctamente o se cancelen en conjunto.
+            </p>
+
+            <div class="sql-block">
+
+BEGIN TRANSACTION;
+
+INSERT INTO Reservaciones (...);
+
+UPDATE Vuelos
+SET asientos_disponibles = asientos_disponibles - 1;
+
+INSERT INTO Pagos (...);
+
+COMMIT;
+
+-- ROLLBACK si ocurre error
+
+            </div>
+
+            <div class="transaction-guarantee">
+
+                <strong>Garantiza:</strong>
+
+                No se puede reservar un asiento sin generar el pago correspondiente.
+
+            </div>
+
+        </section>
+
+        <!-- TRANSACCIÓN 2 -->
+
+        <section class="transaction-card">
+
+            <div class="transaction-header">
+
+                <h2>
+                    <i class="fa-solid fa-user-check"></i>
+                    Check-In de Pasajeros
+                </h2>
+
+                <span class="transaction-badge">
+                    ACID
+                </span>
+
+            </div>
+
+            <p>
+                Verifica simultáneamente la disponibilidad del vuelo, la validez
+                del pasaporte y actualiza el estado de la reservación.
+            </p>
+
+            <div class="sql-block">
+
+BEGIN TRANSACTION;
+
+VALIDAR PASAPORTE;
+
+VERIFICAR ESPACIO DISPONIBLE;
+
+ACTUALIZAR RESERVACION
+SET estado = 'Check-In';
+
+GENERAR PASE DE ABORDAR;
+
+COMMIT;
+
+-- ROLLBACK si alguna validación falla
+
+            </div>
+
+            <div class="transaction-guarantee">
+
+                <strong>Garantiza:</strong>
+
+                El pasajero sólo podrá abordar si todas las validaciones fueron exitosas.
+
+            </div>
+
+        </section>
+
+        <!-- HISTORIAL -->
+
+        <section class="transaction-log">
+
+            <h2>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Historial de Transacciones
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Transacción</th>
+                        <th>Estado</th>
+                        <th>Duración</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>30/05/2026 15:20</td>
+                        <td>Proceso de Reservación</td>
+                        <td>
+                            <span class="status-success">
+                                COMMIT
+                            </span>
+                        </td>
+                        <td>0.42 seg</td>
+                    </tr>
+
+                    <tr>
+                        <td>30/05/2026 14:48</td>
+                        <td>Check-In de Pasajeros</td>
+                        <td>
+                            <span class="status-success">
+                                COMMIT
+                            </span>
+                        </td>
+                        <td>0.31 seg</td>
+                    </tr>
+
+                    <tr>
+                        <td>30/05/2026 13:12</td>
+                        <td>Proceso de Reservación</td>
+                        <td>
+                            <span class="status-error">
+                                ROLLBACK
+                            </span>
+                        </td>
+                        <td>0.09 seg</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Tripulación | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i>
+                    Aerolíneas
+                </a>
+            </li>
+
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i>
+                    Aeronaves
+                </a>
+            </li>
+
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i>
+                    Rutas
+                </a>
+            </li>
+
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    Vuelos
+                </a>
+            </li>
+
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i>
+                    Pasajeros
+                </a>
+            </li>
+
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Tripulación
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i>
+                    Asignación de Tripulación
+                </a>
+            </li>
+
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i>
+                    Reservaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="vistas.html">
+                    <i class="fa-solid fa-eye"></i>
+                    Vistas SQL
+                </a>
+            </li>
+
+            <li>
+                <a href="procedimientos.html">
+                    <i class="fa-solid fa-gears"></i>
+                    Procedimientos
+                </a>
+            </li>
+
+            <li>
+                <a href="triggers.html">
+                    <i class="fa-solid fa-bolt"></i>
+                    Triggers
+                </a>
+            </li>
+
+            <li>
+                <a href="transacciones.html">
+                    <i class="fa-solid fa-database"></i>
+                    Transacciones
+                </a>
+            </li>
+            
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Asignación de Tripulación</h1>
+                <p>Administración de personal asignado a vuelos</p>
+            </div>
+
+            <a href="nueva_asignacion.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i>
+                Nueva Asignación
+            </a>
+
+        </header>
+
+        <!-- TARJETAS -->
+
+        <section class="stats">
+
+            <div class="card">
+                <i class="fa-solid fa-users-gear"></i>
+                <h2>428</h2>
+                <p>Asignaciones Totales</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-plane"></i>
+                <h2>126</h2>
+                <p>Vuelos Cubiertos</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-check"></i>
+                <h2>287</h2>
+                <p>Personal Disponible</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-group"></i>
+                <h2>141</h2>
+                <p>Personal Asignado</p>
+            </div>
+
+        </section>
+
+    
+        <!-- TABLA -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID Vuelo</th>
+                        <th>Vuelo</th>
+                        <th>Empleado</th>
+                        <th>Licencia</th>
+                        <th>Rol</th>
+                        <th>Fecha Asignación</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+                        <td>AM102</td>
+                        <td>Carlos Mendoza</td>
+                        <td>PIL-45821</td>
+                        <td>Piloto</td>
+                        <td>30/05/2026</td>
+
+                        <td>
+                            <span class="assignment-status assigned">
+                                Asignado
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>1</td>
+                        <td>AM102</td>
+                        <td>Ana Rodríguez</td>
+                        <td>COP-78542</td>
+                        <td>Copiloto</td>
+                        <td>30/05/2026</td>
+
+                        <td>
+                            <span class="assignment-status assigned">
+                                Asignado
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+                        <td>VB304</td>
+                        <td>Laura Gómez</td>
+                        <td>SOB-98541</td>
+                        <td>Sobrecargo</td>
+                        <td>29/05/2026</td>
+
+                        <td>
+                            <span class="assignment-status assigned">
+                                Asignado
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3</td>
+                        <td>DL502</td>
+                        <td>José Ramírez</td>
+                        <td>ING-22114</td>
+                        <td>Ingeniero de Vuelo</td>
+                        <td>28/05/2026</td>
+
+                        <td>
+                            <span class="assignment-status standby">
+                                En Espera
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
