@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Pasajero | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i> Dashboard
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i> Pasajeros
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajerosVIP.html">
+                        <i class="fa-solid fa-crown"></i> Pasajeros VIP
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i> Reservaciones
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Nuevo Pasajero</h1>
+                <p>Registro de pasajeros en el sistema aeroportuario</p>
+            </div>
+            <a href="pasajeros.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i> Volver
+            </a>
+        </header>
+
+        <section class="form-container">
+            <form id="nuevoPasajero" class="form-grid">
+
+                <!-- DATOS PERSONALES -->
+                <div class="form-group">
+                    <label>Nombre(s)</label>
+                    <input id="nombre" type="text" placeholder="Juan Carlos"  minlength="3" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input id="apellido" type="text" placeholder="Pérez" minlength="3" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Nacimiento</label>
+                    <input id="fechaNacimiento" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Nacionalidad</label>
+                    <input id="nacionalidad" type="text" placeholder="Mexicana" minlength="3" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <label>Pasaporte</label>
+                    <input id="pasaporte" type="number" placeholder="MX12345678" minlength="8" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input id="email" type="email" placeholder="correo@ejemplo.com" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input id="telefono" type="number" placeholder="4491234567" minlength="10" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label>Vuelos Acumulados</label>
+                    <input id="vuelosAcumulados" type="number" value="0" min="0" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Pasajero
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="../../Assets/JS/Empleados/nuevo_pasajero.js"></script>
+</html>

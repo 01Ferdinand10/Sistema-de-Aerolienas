@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Reservación | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i>
+                        Pasajeros
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i>
+                        Reservaciones
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar Sesión
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Nueva Reservación</h1>
+                <p>Registro y venta de boletos de vuelo</p>
+            </div>
+
+            <a href="reservaciones.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver
+            </a>
+
+        </header>
+
+        <section class="form-container">
+
+            <form class="form-grid">
+
+                <!-- PASAJERO -->
+
+                <div class="form-group">
+
+                    <label>Pasajero</label>
+
+                    <select>
+                        <option>Seleccionar Pasajero</option>
+                        <option>PAS-001 | Juan Pérez</option>
+                        <option>PAS-002 | María López</option>
+                        <option>PAS-003 | Carlos Hernández</option>
+                    </select>
+
+                </div>
+
+                <!-- VUELO -->
+
+                <div class="form-group">
+
+                    <label>Vuelo</label>
+
+                    <select>
+                        <option>Seleccionar Vuelo</option>
+                        <option>AM102 | MEX ➜ CUN</option>
+                        <option>Y4215 | MTY ➜ GDL</option>
+                        <option>VB304 | GDL ➜ TIJ</option>
+                    </select>
+
+                </div>
+
+                <!-- FECHA -->
+
+                <div class="form-group">
+
+                    <label>Fecha de Reservación</label>
+
+                    <input type="date">
+
+                </div>
+
+                <!-- CLASE -->
+
+                <div class="form-group">
+
+                    <label>Clase</label>
+
+                    <select>
+                        <option>Económica</option>
+                        <option>Premium Economy</option>
+                        <option>Business</option>
+                        <option>Primera Clase</option>
+                    </select>
+
+                </div>
+
+                <!-- ASIENTO -->
+
+                <div class="form-group">
+
+                    <label>Asiento</label>
+
+                    <input
+                        type="text"
+                        placeholder="12A">
+
+                </div>
+
+                <!-- ESTADO -->
+
+                <div class="form-group">
+
+                    <label>Estado de Reservación</label>
+
+                    <select>
+                        <option>Confirmada</option>
+                        <option>Pendiente</option>
+                        <option>Cancelada</option>
+                        <option>Check-In Realizado</option>
+                    </select>
+
+                </div>
+
+                <!-- PAGO -->
+
+                <div class="form-group">
+
+                    <label>Método de Pago</label>
+
+                    <select>
+                        <option>Tarjeta de Crédito</option>
+                        <option>Tarjeta de Débito</option>
+                        <option>Transferencia</option>
+                        <option>Efectivo</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Total a Pagar ($)</label>
+
+                    <input
+                        type="number"
+                        placeholder="3500">
+
+                </div>
+
+                <!-- REFERENCIA -->
+
+                <div class="form-group">
+
+                    <label>Referencia de Pago</label>
+
+                    <input
+                        type="text"
+                        placeholder="PAY-2026-0001">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Fecha de Pago</label>
+
+                    <input type="date">
+
+                </div>
+
+                <!-- EQUIPAJE -->
+
+                <div class="form-group">
+
+                    <label>Equipaje Documentado</label>
+
+                    <select>
+                        <option>No</option>
+                        <option>Sí</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Piezas de Equipaje</label>
+
+                    <input
+                        type="number"
+                        placeholder="0">
+
+                </div>
+
+                <!-- OBSERVACIONES -->
+
+                <div class="form-group full-width">
+
+                    <label>Observaciones</label>
+
+                    <textarea rows="5"
+                        placeholder="Información adicional de la reservación"></textarea>
+
+                </div>
+
+                <!-- BOTONES -->
+
+                <div class="form-actions">
+
+                    <a href="reservaciones.html"
+                        class="btn-cancel">
+
+                        Cancelar
+
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn-save">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Confirmar Reservación
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

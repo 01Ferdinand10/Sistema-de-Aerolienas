@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos Disponibles</title>
+    <link rel="stylesheet" href="../../Assets/css/usuario.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <div>
+                <h2>Suzuki Airlines</h2>
+                <span>Consulta de vuelos</span>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="usuario.html">
+                    <i class="fa-solid fa-house"></i> Inicio
+                </a>
+            </li>
+            <li class="active">
+                <a href="vuelos_publicos.html">
+                    <i class="fa-solid fa-plane-departure"></i> Vuelos
+                </a>
+            </li>
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Salir
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main>
+        <!-- ENCABEZADO -->
+        <header class="page-header">
+            <div>
+                <h1>Vuelos</h1>
+                <p> Consulta horarios, destinos y estado de los vuelos.</p>
+            </div>
+        </header>
+
+        <!-- FILTROS -->
+        <section class="filters">
+            <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input id="buscador" type="text" placeholder="Buscar por origen, destino o aerolínea">
+            </div>
+        </section>
+
+        <!-- ESTADISTICAS -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-plane-departure"></i>
+                <h2 id="cantVuelosSalida">58</h2>
+                <p>Salidas Hoy</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-plane-arrival"></i>
+                <h2 id="cantVuelosLlegada">54</h2>
+                <p>Llegadas Hoy</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-clock"></i>
+                <h2 id="cantVuelosRetrasados">6</h2>
+                <p>Retrasos Reportados</p>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="flight-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Puerta</th>
+                        <th>Aerolínea</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Salida</th>
+                        <th>Llegada</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="vuelos">
+                    <!--<tr>
+                        <td>AM102</td>
+                        <td>Aeroméxico</td>
+                        <td>CDMX</td>
+                        <td>Cancún</td>
+                        <td>08:30</td>
+                        <td>10:45</td>
+                        <td>
+                            <span class="status programado">
+                                En Tiempo
+                            </span>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+<script src="../../Assets/JS/usuarios/vuelos_publicos.js"></script>
+</html>

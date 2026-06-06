@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasajeros | Sistema Aeroportuario</title>
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i>Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i>Pasajeros
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../empleado/pasajerosVIP.html">
+                        <i class="fa-solid fa-crown"></i>Pasajeros VIP
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i>Reservaciones
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1> Pasajeros VIP </h1>
+                <p>
+                    Consulta y administra los perfiles de los pasajeros más distinguidos del sistema.
+                </p>
+                <section class="filters">
+                    <div class="search-box">
+                        <input id="buscador" type="text" placeholder="🔍 Busca por pasaporte, nombre, apellido o fiedelidad">
+                    </div>
+                </section>
+            </div>
+            <div class="hero-image">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pasaporte</th>
+                        <th>Nombre</th>
+                        <th>Nacionalidad</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Fidelidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="pasajerosVIP">
+                    <!--<tr>
+                        <td>MXA123456</td>
+                        <td>Dahlia Jiménez</td>
+                        <td>México</td>
+                        <td>4491234567</td>
+                        <td>dahlia@email.com</td>
+                        <td>
+                            <span class="loyalty gold">
+                                Oro
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="panelEditar" class="edit-panel">
+            <div class="edit-header">
+                <h2>Editar Pasajero</h2>
+                <button onclick="cerrarEditor()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="editarPasajero" class="edit-form">
+                <label>Pasaporte</label>
+                <input id="pasaporte" type="text" disabled>
+
+                <label>Nombre</label>
+                <input id="nombre" type="text" >
+
+                <label>Apellido</label>
+                <input id="apellido" type="text" >
+
+                <label>Nacionalidad</label>
+                <input id="nacionalidad" type="text">
+
+                <label>Teléfono</label>
+                <input id="telefono" type="number" >
+
+                <label>Email</label>
+                <input id="email" type="email">
+
+                <label>Vuelos Acumulados</label>
+                <input id="vuelosAcumulados" type="number">
+
+                <button type="submit" class="btn-save">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="../../Assets/JS/Empleados/pasajerosVIP.js"></script>
+</html>

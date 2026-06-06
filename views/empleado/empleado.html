@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Empleado | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i> Pasajeros
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajerosVIP.html">
+                        <i class="fa-solid fa-crown"></i> Pasajeros VIP
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i> Reservaciones
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main>
+
+        <!-- HEADER -->
+        <header>
+            <div>
+                <h1>Panel de Empleado</h1>
+                <p>Gestión de pasajeros y reservaciones</p>
+            </div>
+            <div class="employee-info">
+                <i class="fa-solid fa-user"></i>
+                <span>Empleado Activo</span>
+            </div>
+        </header>
+
+        <!-- BIENVENIDA -->
+        <section class="welcome">
+            <div class="welcome-content">
+                <h2>Bienvenido al Sistema Suzuki Airlines</h2>
+                <p>
+                    Desde aquí podrás registrar pasajeros,
+                    administrar reservaciones y brindar
+                    atención a los clientes.
+                </p>
+            </div>
+            <i class="fa-solid fa-plane-up hero-icon"></i>
+        </section>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2 id="cantPasajerosRegis">1,254</h2>
+                <p>Pasajeros Registrados</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-ticket"></i>
+                <h2 id="cantReservacionesActivas">342</h2>
+                <p>Reservaciones Activas</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h2 id="cantReservacionesHoy">82</h2>
+                <p>Reservaciones Hoy</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-clock"></i>
+                <h2 id="cantCheckInPendientes">16</h2>
+                <p>Check-In Pendientes</p>
+            </div>
+        </section>
+
+        <!-- ACCESO RÁPIDO -->
+        <section class="quick-access">
+            <h2>Acceso Rápido</h2>
+            <div class="modules">
+                <a href="../empleado/nuevo_pasajero.html" class="module">
+                    <i class="fa-solid fa-user-plus"></i>
+                      <span>Nuevo Pasajero</span>
+                </a>
+                <a href="../empleado/nueva_reservacion.html" class="module">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>Nueva Reservación</span>
+                </a>
+                <a href="../empleado/pasajerosVIP.html" class="module">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Ver Pasajeros VIP</span>
+                </a>
+                <a href="../empleado/reservaciones.html" class="module">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Ver Reservaciones</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../../Assets/JS/Empleados/empleado.js"></script>
+</html>

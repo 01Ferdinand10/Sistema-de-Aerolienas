@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Pasajero | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i>
+                    Aerolíneas
+                </a>
+            </li>
+
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i>
+                    Aeronaves
+                </a>
+            </li>
+
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i>
+                    Rutas
+                </a>
+            </li>
+
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    Vuelos
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i>
+                    Pasajeros
+                </a>
+            </li>
+
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Tripulación
+                </a>
+            </li>
+            
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i>
+                    Asignación de Tripulación
+                </a>
+            </li>
+
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i>
+                    Reservaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="vistas.html">
+                    <i class="fa-solid fa-eye"></i>
+                    Vistas SQL
+                </a>
+            </li>
+
+            <li>
+                <a href="procedimientos.html">
+                    <i class="fa-solid fa-gears"></i>
+                    Procedimientos
+                </a>
+            </li>
+
+            <li>
+                <a href="triggers.html">
+                    <i class="fa-solid fa-bolt"></i>
+                    Triggers
+                </a>
+            </li>
+
+            <li>
+                <a href="transacciones.html">
+                    <i class="fa-solid fa-database"></i>
+                    Transacciones
+                </a>
+            </li>
+            
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Nuevo Pasajero</h1>
+                <p>Registro de pasajeros en el sistema aeroportuario</p>
+            </div>
+
+            
+            <a href="pasajeros.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver
+            </a>
+
+        </header>
+
+        <section class="form-container">
+
+            <form class="form-grid">
+
+                <!-- DATOS PERSONALES -->
+
+                <div class="form-group">
+                    <label>Nombre(s)</label>
+                    <input type="text" placeholder="Juan Carlos">
+                </div>
+
+                <div class="form-group">
+                    <label>Apellido Paterno</label>
+                    <input type="text" placeholder="Pérez">
+                </div>
+
+                <div class="form-group">
+                    <label>Apellido Materno</label>
+                    <input type="text" placeholder="López">
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha de Nacimiento</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo</label>
+                    <select>
+                        <option>Seleccionar</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nacionalidad</label>
+                    <input type="text" placeholder="Mexicana">
+                </div>
+
+                <!-- DOCUMENTACIÓN -->
+
+                <div class="form-group">
+                    <label>Pasaporte</label>
+                    <input type="text" placeholder="MX12345678">
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha de Expiración del Pasaporte</label>
+                    <input type="date">
+                </div>
+
+                <!-- CONTACTO -->
+
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="tel" placeholder="4491234567">
+                </div>
+
+                <!-- FIDELIDAD -->
+
+                <div class="form-group">
+                    <label>Nivel de Fidelidad</label>
+                    <select>
+                        <option>Básico</option>
+                        <option>Plata</option>
+                        <option>Oro</option>
+                        <option>Platino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Vuelos Acumulados</label>
+                    <input type="number" value="0">
+                </div>
+
+                <!-- DIRECCIÓN -->
+
+                <div class="form-group full-width">
+                    <label>Domicilio</label>
+                    <textarea rows="4"
+                        placeholder="Dirección completa del pasajero"></textarea>
+                </div>
+
+                <!-- OBSERVACIONES -->
+
+                <div class="form-group full-width">
+                    <label>Observaciones</label>
+                    <textarea rows="4"
+                        placeholder="Información adicional"></textarea>
+                </div>
+
+                <!-- BOTONES -->
+
+                <div class="form-actions">
+
+                    <a href="pasajeros.html"
+                        class="btn-cancel">
+
+                        Cancelar
+
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn-save">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Guardar Pasajero
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

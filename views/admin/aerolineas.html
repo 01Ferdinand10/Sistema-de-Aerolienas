@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerolíneas | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i> Aerolíneas
+                </a>
+            </li>
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i> Aeronaves
+                </a>
+            </li>
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i> Rutas
+                </a>
+            </li>
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i> Vuelos
+                </a>
+            </li>
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i> Pasajeros
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i> Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i> Asignación de Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i> Reservaciones
+                </a>
+            </li>    
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Gestión de Aerolíneas</h1>
+                <p>Administración de compañías aéreas registradas</p>
+            </div>
+            <a href="nueva_aerolinea.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Nueva Aerolínea
+            </a>
+        </header>
+
+        <!-- TARJETAS -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-building"></i>
+                <h2 id="cantAerolineas">18</h2>
+                <p>Aerolíneas Registradas</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-globe"></i>
+                <h2 id="cantPaises">12</h2>
+                <p>Países Representados</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-plane"></i>
+                <h2 id="cantAeronaves">58</h2>
+                <p>Aeronaves Asociadas</p>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>IATA</th>
+                        <th>País</th>
+                        <th>Fundación</th>
+                        <th>Sitio Web</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaAerolineas">
+                    <!--<tr>
+                        <td>Aeroméxico</td>
+                        <td>AM</td>
+                        <td>México</td>
+                        <td>1934</td>
+                        <td>
+                            <a href="#">www.aeromexico.com</a>
+                        </td>
+                        <td>
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="panelEditar" class="edit-panel">
+            <div class="edit-header">
+                <h2>Editar Aerolínea</h2>
+                <button onclick="cerrarEditor()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="editarAerolinea" class="edit-form">
+                <input id="aerolinea_id" type="text" hidden>
+
+                <label>Nombre</label>
+                <input id="nombre" type="text" >
+
+                <label>IATA</label>
+                <input id="codigo_IATA" type="text" >
+
+                <label>País de Origen</label>
+                <input id="pais_origen" type="text">
+
+                <label>Fecha de Fundación</label>
+                <input id="fecha_fundacion" type="date">
+
+                <label>Sitio Web</label>
+                <input id="sitio_web" type="url">
+
+                <button type="submit" class="btn-save">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="../../Assets/JS/Admin/aerolineas.js"></script>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasajeros | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i>Dashboard
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i>Pasajeros
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajerosVIP.html">
+                        <i class="fa-solid fa-crown"></i>Pasajeros VIP
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i>Reservaciones
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Gestión de Pasajeros</h1>
+                <p>Administración de pasajeros y programas de fidelidad</p>
+            </div>
+            <a href="nuevo_pasajero.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i>
+                Nuevo Pasajero
+            </a>
+        </header>
+
+        <!-- TARJETAS -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2 id="cantPasajerosRegis">1,842</h2>
+                <p>Pasajeros Registrados</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-crown"></i>
+                <h2 id="cantClientesVIP">215</h2>
+                <p>Clientes VIP</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <h2 id="cantGanancias">7,856</h2>
+                <p>Ganancias Acumuladas al Año</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-id-card"></i>
+                <h2 id="cantNacionalidades">34</h2>
+                <p>Nacionalidades</p>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pasaporte</th>
+                        <th>Nombre</th>
+                        <th>Nacionalidad</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Fidelidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPasajeros">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>MXA123456</td>
+                        <td>Dahlia Jiménez</td>
+                        <td>México</td>
+                        <td>4491234567</td>
+                        <td>dahlia@email.com</td>
+                        <td>Oro</td>
+
+                        <td>
+                            <button class="btn-edit" onclick="abrirEditor('MXA123456')">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="panelEditar" class="edit-panel">
+            <div class="edit-header">
+                <h2>Editar Pasajero</h2>
+                <button onclick="cerrarEditor()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="editarPasajero" class="edit-form">
+                <label>Pasaporte</label>
+                <input id="pasaporte" type="text" disabled>
+
+                <label>Nombre</label>
+                <input id="nombre" type="text" >
+
+                <label>Apellido</label>
+                <input id="apellido" type="text" >
+
+                <label>Nacionalidad</label>
+                <input id="nacionalidad" type="text">
+
+                <label>Teléfono</label>
+                <input id="telefono" type="number" >
+
+                <label>Email</label>
+                <input id="email" type="email">
+
+                <label>Vuelos Acumulados</label>
+                <input id="vuelosAcumulados" type="number">
+
+                <button type="submit" class="btn-save">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="../../Assets/JS/Empleados/pasajeros.js"></script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Ruta | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i> Aerolíneas
+                </a>
+            </li>
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i> Aeronaves
+                </a>
+            </li>
+            <li class="active">
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i> Rutas
+                </a>
+            </li>
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i> Vuelos
+                </a>
+            </li>
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i> Pasajeros
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i> Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i> Asignación de Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i> Reservaciones
+                </a>
+            </li>
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Nueva Ruta</h1>
+                <p>Registro de rutas aéreas disponibles</p>
+            </div>
+            <a href="rutas.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver
+            </a>
+        </header>
+
+        <section class="form-container">
+            <form id="nueva_ruta" class="form-grid">
+                <div class="form-group">
+                    <label>Aeropuerto Origen</label>
+                    <input id="origen" type="text" placeholder="MEX">
+                </div>
+                <div class="form-group">
+                    <label>Aeropuerto Destino</label>
+                    <input id="destino" type="text" placeholder="CAN">
+                </div>
+                <div class="form-group">
+                    <label>Distancia (km)</label>
+                    <input id="distancia" type="number" placeholder="1285" min="10">
+                </div>
+                <div class="form-group">
+                    <label>Tiempo Estimado Min</label>
+                    <input id="tiempo" type="number" placeholder="215" min="10">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Ruta
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="../../Assets/JS/Admin/nueva_ruta.js"></script>
+</html>

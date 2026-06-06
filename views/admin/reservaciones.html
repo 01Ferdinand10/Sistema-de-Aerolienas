@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i>
+                    Aerolíneas
+                </a>
+            </li>
+
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i>
+                    Aeronaves
+                </a>
+            </li>
+
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i>
+                    Rutas
+                </a>
+            </li>
+
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    Vuelos
+                </a>
+            </li>
+
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i>
+                    Pasajeros
+                </a>
+            </li>
+
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Tripulación
+                </a>
+            </li>
+                        
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i>
+                    Asignación de Tripulación
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i>
+                    Reservaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="vistas.html">
+                    <i class="fa-solid fa-eye"></i>
+                    Vistas SQL
+                </a>
+            </li>
+
+            <li>
+                <a href="procedimientos.html">
+                    <i class="fa-solid fa-gears"></i>
+                    Procedimientos
+                </a>
+            </li>
+
+            <li>
+                <a href="triggers.html">
+                    <i class="fa-solid fa-bolt"></i>
+                    Triggers
+                </a>
+            </li>
+
+            <li>
+                <a href="transacciones.html">
+                    <i class="fa-solid fa-database"></i>
+                    Transacciones
+                </a>
+            </li>
+            
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Gestión de Reservaciones</h1>
+                <p>Administración de boletos y reservas de vuelos</p>
+            </div>
+
+            <a href="nueva_reservacion.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i>
+                Nueva Reservación
+            </a>
+
+        </header>
+
+        <!-- ESTADÍSTICAS -->
+
+        <section class="stats">
+
+            <div class="card">
+                <i class="fa-solid fa-ticket"></i>
+                <h2>3,428</h2>
+                <p>Reservaciones Totales</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-credit-card"></i>
+                <h2>2,915</h2>
+                <p>Pagadas</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-clock"></i>
+                <h2>356</h2>
+                <p>Pendientes</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-ban"></i>
+                <h2>157</h2>
+                <p>Canceladas</p>
+            </div>
+
+        </section>
+
+        <!-- TABLA -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Reserva</th>
+                        <th>Pasajero</th>
+                        <th>Vuelo</th>
+                        <th>Fecha</th>
+                        <th>Asiento</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>RES-1001</td>
+                        <td>Dahlia Jiménez</td>
+                        <td>AM102</td>
+                        <td>28/05/2026</td>
+                        <td>12A</td>
+                        <td>$4,250</td>
+
+                        <td>
+                            <span class="reservation-status paid-status">
+                                Pagada
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>RES-1002</td>
+                        <td>Juan Pérez</td>
+                        <td>VB304</td>
+                        <td>29/05/2026</td>
+                        <td>18F</td>
+                        <td>$2,850</td>
+
+                        <td>
+                            <span class="reservation-status pending-status">
+                                Pendiente
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>RES-1003</td>
+                        <td>María García</td>
+                        <td>DL502</td>
+                        <td>27/05/2026</td>
+                        <td>3C</td>
+                        <td>$8,900</td>
+
+                        <td>
+                            <span class="reservation-status cancelled-status">
+                                Cancelada
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>RES-1004</td>
+                        <td>Carlos López</td>
+                        <td>Y4215</td>
+                        <td>30/05/2026</td>
+                        <td>7D</td>
+                        <td>$3,600</td>
+
+                        <td>
+                            <span class="reservation-status paid-status">
+                                Pagada
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

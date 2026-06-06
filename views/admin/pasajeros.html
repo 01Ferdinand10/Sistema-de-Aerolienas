@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasajeros | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i> Aerolíneas
+                </a>
+            </li>
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i> Aeronaves
+                </a>
+            </li>
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i> Rutas
+                </a>
+            </li>
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i> Vuelos
+                </a>
+            </li>
+            <li class="active">
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i> Pasajeros
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i> Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i> Asignación de Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i> Reservaciones
+                </a>
+            </li>
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Gestión de Pasajeros</h1>
+                <p>Administración de pasajeros y programas de fidelidad</p>
+            </div>
+            <a href="nuevo_pasajero.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Nuevo Pasajero
+            </a>
+        </header>
+
+        <!-- TARJETAS -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>1,842</h2>
+                <p>Pasajeros Registrados</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-crown"></i>
+                <h2>215</h2>
+                <p>Clientes VIP</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-plane"></i>
+                <h2>7,856</h2>
+                <p>Vuelos Acumulados</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-id-card"></i>
+                <h2>34</h2>
+                <p>Nacionalidades</p>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pasaporte</th>
+                        <th>Nombre</th>
+                        <th>Nacionalidad</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Fidelidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>MXA123456</td>
+                        <td>Dahlia Jiménez</td>
+                        <td>México</td>
+                        <td>4491234567</td>
+                        <td>dahlia@email.com</td>
+                        <td>
+                            <span class="loyalty gold"> Oro </span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+<script src="../../Assets/JS/Admin/pasajero.js"></script>
+</html>

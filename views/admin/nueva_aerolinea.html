@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Aerolínea | Sistema Aeroportuario</title>
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i>Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i>Aerolíneas
+                </a>
+            </li>
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i>Aeronaves
+                </a>
+            </li>
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i>Rutas
+                </a>
+            </li>
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i>Vuelos
+                </a>
+            </li>
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i>Pasajeros
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i>Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i>Asignación de Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i>Reservaciones
+                </a>
+            </li>
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <header>
+            <div>
+                <h1>Nueva Aerolínea</h1>
+                <p>Registro de una nueva compañía aérea</p>
+            </div>
+            <a href="aerolineas.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i>Volver
+            </a>
+        </header>
+
+        <section class="form-container">
+            <form id="nuevaAerolinea" class="form-grid">
+                <div class="form-group">
+                    <label>Nombre de la Aerolínea</label>
+                    <input id="nombre-aerolinea" type="text" placeholder="Ej. Aeroméxico">
+                </div>
+                <div class="form-group">
+                    <label>Código IATA</label>
+                    <input id="codigo-iata" type="text" maxlength="3" placeholder="AM">
+                </div>
+                <div class="form-group">
+                    <label>País</label>
+                    <input id="pais" type="text" placeholder="México">
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Fundación</label>
+                    <input id="fecha-fundacion" type="date" placeholder="2000-01-01">
+                </div>
+                <div class="form-group">
+                    <label>Sitio Web</label>
+                    <input id="sitio-web" type="text" placeholder="https://www.aerolinea.com">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">
+                        <i class="fa-solid fa-floppy-disk"></i>Guardar Aerolínea
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="../../Assets/JS/Admin/nueva_aerolinea.js"></script>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i>
+                    Aerolíneas
+                </a>
+            </li>
+
+            <li>
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i>
+                    Aeronaves
+                </a>
+            </li>
+
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i>
+                    Rutas
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    Vuelos
+                </a>
+            </li>
+
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i>
+                    Pasajeros
+                </a>
+            </li>
+
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Tripulación
+                </a>
+            </li>
+            
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i>
+                    Asignación de Tripulación
+                </a>
+            </li>
+
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i>
+                    Reservaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="vistas.html">
+                    <i class="fa-solid fa-eye"></i>
+                    Vistas SQL
+                </a>
+            </li>
+
+            <li>
+                <a href="procedimientos.html">
+                    <i class="fa-solid fa-gears"></i>
+                    Procedimientos
+                </a>
+            </li>
+
+            <li>
+                <a href="triggers.html">
+                    <i class="fa-solid fa-bolt"></i>
+                    Triggers
+                </a>
+            </li>
+
+            <li>
+                <a href="transacciones.html">
+                    <i class="fa-solid fa-database"></i>
+                    Transacciones
+                </a>
+            </li>
+            
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Gestión de Vuelos</h1>
+                <p>Control y monitoreo de operaciones aéreas</p>
+            </div>
+
+            <a href="nuevo_vuelo.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i>
+                Nuevo Vuelo
+            </a>
+
+        </header>
+
+        <!-- TARJETAS -->
+
+        <section class="stats">
+
+            <div class="card">
+                <i class="fa-solid fa-plane-departure"></i>
+                <h2>126</h2>
+                <p>Vuelos Hoy</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-plane"></i>
+                <h2>84</h2>
+                <p>Programados</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-cloud"></i>
+                <h2>5</h2>
+                <p>Retrasados</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-check-circle"></i>
+                <h2>37</h2>
+                <p>Aterrizados</p>
+            </div>
+
+        </section>
+
+        
+        <!-- TABLA -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Vuelo</th>
+                        <th>Aerolínea</th>
+                        <th>Ruta</th>
+                        <th>Aeronave</th>
+                        <th>Salida</th>
+                        <th>Llegada</th>
+                        <th>Puerta</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>AM102</td>
+                        <td>Aeroméxico</td>
+                        <td>MEX ➜ CUN</td>
+                        <td>Boeing 737-800</td>
+                        <td>08:30</td>
+                        <td>10:50</td>
+                        <td>A12</td>
+
+                        <td>
+                            <span class="status scheduled-status">
+                                Programado
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Y4215</td>
+                        <td>Volaris</td>
+                        <td>MTY ➜ GDL</td>
+                        <td>Airbus A320</td>
+                        <td>09:15</td>
+                        <td>10:40</td>
+                        <td>B04</td>
+
+                        <td>
+                            <span class="status flying-status">
+                                En Vuelo
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>VB304</td>
+                        <td>Viva Aerobus</td>
+                        <td>CUN ➜ MEX</td>
+                        <td>Airbus A321</td>
+                        <td>11:00</td>
+                        <td>13:15</td>
+                        <td>C08</td>
+
+                        <td>
+                            <span class="status delayed-status">
+                                Retrasado
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>DL502</td>
+                        <td>Delta</td>
+                        <td>LAX ➜ MEX</td>
+                        <td>Boeing 757</td>
+                        <td>06:20</td>
+                        <td>09:05</td>
+                        <td>D11</td>
+
+                        <td>
+                            <span class="status landed-status">
+                                Aterrizado
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeronaves | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-plane"></i>
+            <h2>Aeropuerto</h2>
+        </div>
+
+        <ul>
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="aerolineas.html">
+                    <i class="fa-solid fa-building"></i> Aerolíneas
+                </a>
+            </li>
+            <li class="active">
+                <a href="aeronaves.html">
+                    <i class="fa-solid fa-plane-circle-check"></i> Aeronaves
+                </a>
+            </li>
+            <li>
+                <a href="rutas.html">
+                    <i class="fa-solid fa-route"></i> Rutas
+                </a>
+            </li>
+            <li>
+                <a href="vuelos.html">
+                    <i class="fa-solid fa-plane-departure"></i> Vuelos
+                </a>
+            </li>
+            <li>
+                <a href="pasajeros.html">
+                    <i class="fa-solid fa-users"></i> Pasajeros
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion.html">
+                    <i class="fa-solid fa-user-tie"></i> Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="tripulacion_vuelo.html">
+                    <i class="fa-solid fa-users-gear"></i> Asignación de Tripulación
+                </a>
+            </li>
+            <li>
+                <a href="reservaciones.html">
+                    <i class="fa-solid fa-ticket"></i> Reservaciones
+                </a>
+            </li>         
+            <li>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Gestión de Aeronaves</h1>
+                <p>Administración de la flota aérea registrada</p>
+            </div>
+            <a href="nueva_aeronave.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Nueva Aeronave
+            </a>
+        </header>
+
+        <!-- TARJETAS RESUMEN -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-plane"></i>
+                <h2 id="cantAeronaves" >58</h2>
+                <p>Total Aeronaves</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-circle-check"></i>
+                <h2 id="cantAeronavesActive">49</h2>
+                <p>Aeronaves Activas</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h2 id="cantAeronavesMal">7</h2>
+                <p>En Mantenimiento/Inactivas</p>
+            </div>
+        </section>
+
+        <header>
+            <div>
+                <h1>Aeronaves en Mantenimiento/Inactivas</h1>
+            </div>
+        </header>
+
+        <!-- TABLA 1 -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aerolínea</th>
+                        <th>Modelo</th>
+                        <th>Cap. Pasajeros</th>
+                        <th>Cap. Carga</th>
+                        <th>Fabricación</th>
+                        <th>Fecha Retorno</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaNoActivos" >
+                    <!--<tr>
+                        <td>Aeroméxico</td>
+                        <td>Boeing 737-800</td>
+                        <td>189</td>
+                        <td>20,000 kg</td>
+                        <td>2018</td>
+                        <td>10/05/2026</td>
+                        <td>
+                            <span class="status active-status">
+                                Activo
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </section>
+
+        <br><br>
+        <header>
+            <div>
+                <h1>Aeronaves Activas</h1>
+            </div>
+        </header>
+
+        <!-- TABLA 2 -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aerolínea</th>
+                        <th>Modelo</th>
+                        <th>Cap. Pasajeros</th>
+                        <th>Cap. Carga</th>
+                        <th>Fabricación</th>
+                        <th>Último Mantenimiento</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaActivos" >
+                    <!--<tr>
+                        <td>Aeroméxico</td>
+                        <td>Boeing 737-800</td>
+                        <td>189</td>
+                        <td>20,000 kg</td>
+                        <td>2018</td>
+                        <td>10/05/2026</td>
+                        <td>
+                            <span class="status active-status">
+                                Activo
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="panelEditar" class="edit-panel">
+            <div class="edit-header">
+                <h2>Editar Aeronave</h2>
+                <button onclick="cerrarEditor()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="editarAerolinea" class="edit-form">
+                <input id="aeronave_id" type="number" hidden>
+
+                <label>Modelo</label>
+                <input id="modelo" type="text" >
+
+                <label>Capacidad de Pasajeros</label>
+                <input id="cap_pasajeros" type="number" min="1">
+
+                <label>Capacidad de Carga</label>
+                <input id="cap_carga" type="number" min="20">
+
+                <label>Año Fabricacion</label>
+                <input id="fabrication" type="date">
+
+                <label>Ultimo Mantenimiento</label>
+                <input id="ult_mant" type="date">
+
+                <label>Estado</label>
+                <select id="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                    <option value="Mantenimiento">Mantenimiento</option>
+                </select>
+
+                <button type="submit" class="btn-save">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="../../Assets/JS/Admin/aeronaves.js"></script>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones | Sistema Aeroportuario</title>
+
+    <link rel="stylesheet" href="../../Assets/css/empleado.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<script>
+
+function abrirEditorReserva() {
+    document
+        .getElementById("panelReserva")
+        .classList.add("active");
+}
+
+function cerrarEditorReserva() {
+    document
+        .getElementById("panelReserva")
+        .classList.remove("active");
+}
+
+</script>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h2>Empleado</h2>
+                <span>Atención al Cliente</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="empleado.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajeros.html">
+                        <i class="fa-solid fa-users"></i>
+                        Pasajeros
+                    </a>
+                </li>
+                <li>
+                    <a href="../empleado/pasajerosVIP.html">
+                        <i class="fa-solid fa-crown"></i>
+                        Pasajeros VIP
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../empleado/reservaciones.html">
+                        <i class="fa-solid fa-ticket"></i>
+                        Reservaciones
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main>
+        <header>
+            <div>
+                <h1>Gestión de Reservaciones</h1>
+                <p>Administración de boletos y reservas de vuelos</p>
+            </div>
+            <a href="nueva_reservacion.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Nueva Reservación
+            </a>
+        </header>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="stats">
+            <div class="card">
+                <i class="fa-solid fa-ticket"></i>
+                <h2>3,428</h2>
+                <p>Reservaciones Totales</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-credit-card"></i>
+                <h2>2,915</h2>
+                <p>Pagadas</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-clock"></i>
+                <h2>356</h2>
+                <p>Pendientes</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-ban"></i>
+                <h2>157</h2>
+                <p>Canceladas</p>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reserva</th>
+                        <th>Pasajero</th>
+                        <th>Vuelo</th>
+                        <th>Fecha</th>
+                        <th>Asiento</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RES-1001</td>
+                        <td>Dahlia Jiménez</td>
+                        <td>AM102</td>
+                        <td>28/05/2026</td>
+                        <td>12A</td>
+                        <td>$4,250</td>
+                        <td>
+                            <span class="reservation-status paid-status">
+                                Pagada
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn-edit" onclick="abrirEditorReserva()">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- PANEL EDITAR RESERVACIÓN -->
+        <div id="panelReserva" class="edit-panel">
+            <div class="edit-header">
+                <h2>Editar Reservación</h2>
+                <button onclick="cerrarEditorReserva()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form class="edit-form">
+                <label>ID Reservación</label>
+                <input type="text" value="RES-1001">
+
+                <label>Pasajero</label>
+                <input type="text" value="Dahlia Jiménez">
+
+                <label>Vuelo</label>
+                <input type="text" value="AM102">
+
+                <label>Fecha</label>
+                <input type="date" value="2026-05-28">
+
+                <label>Asiento</label>
+                <input type="text" value="12A">
+
+                <label>Total</label>
+                <input type="number" value="4250">
+
+                <label>Estado</label>
+
+                <select>
+                    <option selected>Pagada</option>
+                    <option>Pendiente</option>
+                    <option>Cancelada</option>
+                </select>
+
+                <button type="submit" class="btn-save">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Guardar Cambios
+                </button>
+            </form>
+
+        </div>
+    </main>
+</body>
+
+</html>
