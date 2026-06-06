@@ -6,6 +6,7 @@ const tablaReservaciones = document.getElementById('tablaReservaciones');
 const selectPasajero = document.getElementById('selectPasajero');
 const selectVuelo = document.getElementById('selectVuelo');
 const selectEstado = document.getElementById('selectEstado');
+const selectClase = document.getElementById('selectClase');
 const formEditarReservacion = document.getElementById('editarReserva');
 
 function getReservacionesTotales() {
@@ -124,6 +125,9 @@ function renderReservaciones(datos) {
         const pasajeroId = reserva.pasajero_id || '';
         const vueloId = reserva.vuelo_id || '';
         const estado = reserva.estado || '';
+        const clase = reserva.clase || '';
+        console.log("estado", estado);
+        console.log("clase", clase);
 
         console.log("pasajero id:", pasajeroId);
         console.log("vuelo id:", vueloId);
@@ -149,7 +153,9 @@ function renderReservaciones(datos) {
                 '${vueloId}',
                 '${reserva.asiento}',
                 '${reserva.precio}',
-                '${estado}')">
+                '${estado}',
+                '${clase}')">
+
                     <i
                 class="fa-solid fa-pen"></i>
                 </button>
@@ -179,7 +185,7 @@ selectVuelo.addEventListener('change', (e) => {
 
 
 //editar reservacion
-function abrirEditor(id, pasajeroId, vueloId, asiento, precio, estado) {
+function abrirEditor(id, pasajeroId, vueloId, asiento, precio, estado, clase) {
     document.getElementById('panelReserva').classList.add('active');
 
     console.log("id:", id);
@@ -188,19 +194,22 @@ function abrirEditor(id, pasajeroId, vueloId, asiento, precio, estado) {
     console.log("asiento:", asiento);
     console.log("precio:", precio);
     console.log("estado:", estado);
+    console.log("clase", clase);
     document.getElementById('reservacion_id').value = id || '';
     document.getElementById('selectPasajero').value = pasajeroId || '';
     document.getElementById('selectVuelo').value = vueloId || '';
     document.getElementById('inAsiento').value = asiento || '';
     document.getElementById('total').value = precio;
     document.getElementById('selectEstado').value = estado;
+    document.getElementById('selectClase').value = clase;
 }
 
 formEditarReservacion.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const pasajero_id = document.getElementById('pasajero_id').value;
-    const vuelo_id = document.getElementById('vuelo_id').value;
+    const pasajero_id = document.getElementById('selectPasajero').value;
+    const vuelo_id = document.getElementById('selectVuelo').value;
+
     const clase = document.getElementById('selectClase').value;
     const asiento = document.getElementById('inAsiento').value;
     const total = document.getElementById('total').value;

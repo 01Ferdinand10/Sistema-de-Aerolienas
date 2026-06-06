@@ -11,6 +11,21 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<script>
+
+function abrirEditorVuelo() {
+    document
+        .getElementById("panelVuelo")
+        .classList.add("active");
+}
+
+function cerrarEditorVuelo() {
+    document
+        .getElementById("panelVuelo")
+        .classList.remove("active");
+}
+
+</script>
 
 <body>
 
@@ -209,7 +224,7 @@
                         </td>
                         <td>
 
-                            <button class="btn-edit">
+                            <button class="btn-edit" onclick="abrirEditorVuelo()">
                                 <i class="fa-solid fa-pen"></i>
                             </button>
                         <!-- 
@@ -226,6 +241,81 @@
             </table>
 
         </section>
+
+    <!-- PANEL EDITAR VUELO -->
+        <div id="panelVuelo" class="edit-panel">
+            <div class="edit-header">
+                <h2>Editar Reservación</h2>
+                <button onclick="cerrarEditorVuelo()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="editarVuelo" class="edit-form">
+                <input type="hidden" id="vuelo_id">
+                <input type="hidden" id="aerolinea_id">
+                <input type="hidden" id="aeronave_id">
+                <!-- <label>ID Reservación</label>
+                <input type="text" value="RES-1001"> -->
+
+                <div class="form-group">
+                    <label>Aerolinea</label>
+                    <select id="selectAerolinea">
+                        <option value="">Seleccionar Aerolinea</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label>Vuelo</label>
+                    <select id="selectVuelo">
+                        <option value="">Seleccionar Vuelo</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label>Ruta</label>
+                    <select id="selectRuta">
+                        <option value="">Seleccionar Ruta</option>
+                    </select>   
+
+                </div>
+                <div class="form-group">
+                    <label>Aeronave</label>
+                    <select id="selectAeronave">
+                        <option value="">Seleccionar Aeronave</option>
+                    </select>
+
+                </div>
+                
+                
+                <label>Fecha de Salida</label>
+                <input id="fechaSalida" type="date" >
+                </select>
+                <label>Hora de Salida</label>
+                <input id="horaSalida" type="time">
+                <label>Estado</label>
+
+                <label>Fecha de llegada</label>
+                <input id="fechaLlegada" type="date" >
+                </select>
+                <label>Hora de llegada</label>
+                <input id="horaLlegada" type="time">
+                <label>Estado</label>
+
+                <select id="selectEstado">
+                    <span class="reservation-status pending-status">Pendiente</span>
+                    <span class="reservation-status cancelled-status">Cancelada</span>
+                    <span class="reservation-status paid-status">Confirmada</span>
+                    <span class="reservation-status paid-status">Utilizada</span>
+                </select>
+
+                <button type="submit" class="btn-save">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Guardar Cambios
+                </button>
+            </form>
+
+        </div>
 
     </main>
 

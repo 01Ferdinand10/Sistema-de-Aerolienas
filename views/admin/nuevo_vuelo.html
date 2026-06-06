@@ -148,7 +148,7 @@
 
         <section class="form-container">
 
-            <form class="form-grid">
+            <form id="nuevoVueloForm" class="form-grid">
 
                 <!-- INFORMACIÓN GENERAL -->
 
@@ -156,11 +156,8 @@
 
                     <label>Aerolínea</label>
 
-                    <select>
-                        <option>Seleccionar Aerolínea</option>
-                        <option>Aeroméxico</option>
-                        <option>Volaris</option>
-                        <option>Viva Aerobus</option>
+                    <select id="selectAerolinea">
+                        <option value="">Seleccionar Aerolínea</option>
                     </select>
 
                 </div>
@@ -169,8 +166,8 @@
 
                     <label>Ruta</label>
 
-                    <select>
-                        <option>Seleccionar Ruta</option>
+                    <select id="selectRuta">
+                        <option value="">Seleccionar Ruta</option>
                     </select>
 
                 </div>
@@ -179,8 +176,8 @@
 
                     <label>Aeronave</label>
 
-                    <select>
-                        <option>Seleccionar Modelo</option>
+                    <select id="selectAeronave">
+                        <option value="">Seleccionar Modelo</option>
                     </select>
 
                 </div>
@@ -191,7 +188,7 @@
 
                     <label>Fecha de Salida</label>
 
-                    <input type="date">
+                    <input id="fechaSalida" type="date">
 
                 </div>
 
@@ -199,7 +196,7 @@
 
                     <label>Hora de Salida</label>
 
-                    <input type="time">
+                    <input id="horaSalida" type="time">
 
                 </div>
 
@@ -207,7 +204,7 @@
 
                     <label>Fecha de Llegada</label>
 
-                    <input type="date">
+                    <input id="fechaLlegada" type="date">
 
                 </div>
 
@@ -215,7 +212,7 @@
 
                     <label>Hora de Llegada</label>
 
-                    <input type="time">
+                    <input id="horaLlegada" type="time">
 
                 </div>
 
@@ -225,8 +222,13 @@
 
                     <label>Puerta de Embarque</label>
 
-                    <select>
-                        <option>Seleccionar Puerta</option>
+                    <select id="selectPuerta">
+                        <option value="">Seleccionar Puerta</option>
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="A3">A3</option>
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
                     </select>
 
                 </div>
@@ -236,6 +238,7 @@
                     <label>Asientos Disponibles</label>
 
                     <input
+                        id="inAsientos"
                         type="number"
                         placeholder="180">
 
@@ -246,6 +249,7 @@
                     <label>Precio Base ($)</label>
 
                     <input
+                        id="inPrecio"
                         type="number"
                         placeholder="3500">
 

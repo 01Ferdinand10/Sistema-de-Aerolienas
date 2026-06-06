@@ -51,7 +51,8 @@ END##
 
 
 CREATE VIEW `reservacion_ruta` AS 
-SELECT re.reservacion_id, p.nombre, p.apellido, r.aeropuerto_origen AS origen, r.aeropuerto_destino AS destino, re.fecha_reservacion AS fecha, re.asiento , re.precio, re.estado, re.pasajero_id, re.vuelo_id
+SELECT re.reservacion_id, p.nombre, p.apellido, r.aeropuerto_origen AS origen, r.aeropuerto_destino AS destino, re.fecha_reservacion AS fecha, re.asiento , re.precio,
+re.estado, re.pasajero_id, re.vuelo_id, re.clase
 FROM reservaciones AS re
 JOIN pasajeros AS p ON re.pasajero_id = p.pasajero_id
 JOIN vuelos AS v ON v.vuelo_id = re.vuelo_id
@@ -84,7 +85,11 @@ BEGIN
         VALUES(p_aerolinea_id, p_ruta_id, p_aeronave_id, fecha_salida, p_fecha_llegada, p_fecha_llegada, p_puerta, 'Programado', p_asientos);
 	END IF;
 END##
-    
+
+DROP PROCEDURE insertar_vuelo;
+
+CREATE PROCEDURE `editar_vuelos` (
+	IN 
 /*
 CREATE VIEW `vuelos_aerolinea` AS
 	SELECT puerta_embarque, a.nombre, r.aeropuerto_origen, aeropuerto_destino, fecha_salida, fecha_llegada_real, estado 

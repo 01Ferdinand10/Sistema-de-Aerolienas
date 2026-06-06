@@ -281,6 +281,27 @@ app.get('/obtenerPasajeros', (req, res) => {
     });
 });
 
+app.get('/obtenerAerolineas', (req, res) => {
+    conexion.query("SELECT aerolinea_id, nombre FROM aerolineas ORDER BY nombre ASC;", (err, rows) => {
+        if (err) return res.status(500).json({ message: 'Error' });
+        res.json(rows);
+    });
+});
+
+app.get('/obtenerRutas', (req, res) => {
+    conexion.query("SELECT ruta_id, aeropuerto_origen, aeropuerto_destino FROM rutas ORDER BY aeropuerto_origen ASC;", (err, rows) => {
+        if (err) return res.status(500).json({ message: 'Error' });
+        res.json(rows);
+    });
+});
+
+app.get('/obtenerAeronaves', (req, res) => {
+    conexion.query("SELECT aeronave_id, modelo FROM aeronaves ORDER BY modelo ASC;", (err, rows) => {
+        if (err) return res.status(500).json({ message: 'Error' });
+        res.json(rows);
+    });
+});
+
 app.get('/obtenerVuelos', (req, res) => {
     const q = `SELECT v.vuelo_id, a.codigo_IATA, r.aeropuerto_origen, r.aeropuerto_destino, v.fecha_salida
     FROM vuelos AS v
@@ -291,6 +312,20 @@ app.get('/obtenerVuelos', (req, res) => {
     conexion.query(q, (err, rows) => {
         if (err) return res.status(500).json({ message: 'Error' });
         res.json(rows);
+    });
+});
+
+
+app.post('/nuevoVuelo', (req, res) => {
+    const { aerolinea_id, ruta_id, aeronave_id, fecha_salida, fecha_llegada_real, puerta_embarque, asientos_disponibles } = req.body;
+    if (!aerolinea_id || !ruta_id || !aeronave_id || !fecha_salida || !fecha_llegada_real || !puerta_embarque || !asientos_disponibles) {
+        return res.status(400).json({ message: 'Faltan datos para crear el vuelo' });
+    }
+    const q = `INSERT INTO vuelos (aerolinea_id, ruta_id, aeronave_id, fecha_salida, fecha_llegada_estimada, fecha_llegada_real, puerta_embarque, estado, asientos_disponibles)
+               VALUES (?, ?, ?, ?, ?, ?, ?, 'Programado', ?)`;
+    conexion.query(q, [aerolinea_id, ruta_id, aeronave_id, fecha_salida, fecha_llegada_real, fecha_llegada_real, puerta_embarque, asientos_disponibles], (err, result) => {
+        if (err) return res.status(500).json({ message: err.sqlMessage || 'Error al crear el vuelo' });
+        res.json({ message: 'Vuelo creado exitosamente', vuelo_id: result.insertId });
     });
 });
 
